@@ -34,3 +34,8 @@ variable "key_name" {
 variable "instance_name" {
   
 }
+
+variable "user_data" {
+  description = "Startup script for EC2 instance"
+  type        = string
+}

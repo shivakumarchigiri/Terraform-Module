@@ -141,7 +141,7 @@ resource "aws_instance" "dev_server" {
   instance_type = var.instance_type
   key_name = var.key_name
 
-  user_data = file("myscript.sh")
+  user_data = file("${path.module}/scripts/myscript.sh")
   
   network_interface {
     network_interface_id = aws_network_interface.dev_nic.id
